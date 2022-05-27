@@ -55,7 +55,7 @@
 * **Floyd's tortoise and hare** algorithm is used for cycle detection, espcially in linked lists.
 * Idea: two pointers, that run at two different speeds. If there is a cycle, the two pointers will meet at a node. Else, the faster pointer will be blocked, i.e. won't be able to move forwards.
 * With this algorithm, it is also possible to find the index of the beginning of the cycle. Approach: put two pointers, one at the the beginning of the list, the other one at the meeting point between the tortoise and hare. Then move the two pointers at the same speed 1. They will meet together at the beginning of the cycle.
-* Proof: let's denote C the length of the cycle, L the length of the portion without the cycle and x the portion of the cycle where the two pointers meet. Then the slow pointer has reached $L + K.C + x $ and the fast one $L + K'.C + x$. As the hare runs two times faster than the tortoise, we have: $$2.(L + K.C + x) = L + K'.C + x$$ Simplifications directly lead to: $ x + L = \lambda . C \rightarrow L = \lambda.C - x$. This means that $$L \mod C = C - y $$where $C - y$ is actually the distance between the meeting point and the beginning of the cycle.  
+* Proof: let's denote C the length of the cycle, L the length of the portion without the cycle and x the portion of the cycle where the two pointers meet. Then the slow pointer has reached $L + K.C + x $ and the fast one $L + K'.C + x$. As the hare runs two times faster than the tortoise, we have: $$2.(L + K.C + x) = L + K'.C + x$$ Simplifications directly lead to: $ x + L = \lambda . C \rightarrow L = \lambda.C - x$. This means that $$ L \mod C = C - y $$ where $C - y$ is actually the distance between the meeting point and the beginning of the cycle.  
 
 ## Graphs Algorithms
 
